@@ -1,0 +1,44 @@
+﻿<Page x:Class="Hotel_Vasanov_ISP43.Pages.BookingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Бронирования" Background="#F5F7FA">
+    <Grid>
+        <StackPanel Margin="30 24">
+            <TextBlock Name="TitleText" FontSize="26" Margin="0 0 0 10"/>
+            <TextBlock Text="Выберите запись, чтобы изменить её или отменить." Foreground="#52677A" Margin="0 0 0 15"/>
+            <DataGrid Name="BookingsGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" SelectionMode="Single" Height="420" SelectionChanged="BookingsGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Binding="{Binding ID_Booking}" Width="55"/>
+                    <DataGridTextColumn Header="Гость" Binding="{Binding Full_name}" Width="2*"/>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding Room_number}" Width="*"/>
+                    <DataGridTextColumn Header="Заезд" Binding="{Binding Check_in_date, StringFormat=dd.MM.yyyy}" Width="*"/>
+                    <DataGridTextColumn Header="Выезд" Binding="{Binding Check_out_date, StringFormat=dd.MM.yyyy}" Width="*"/>
+                    <DataGridTextColumn Header="Цена за ночь" Binding="{Binding Nightly_rate, StringFormat=N2}" Width="*"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding Booking_status}" Width="1.5*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Name="AdminPanel" Orientation="Horizontal" Margin="0 20 0 12">
+                <StackPanel>
+                    <TextBlock Text="Заезд"/>
+                    <DatePicker Name="StartDate" Width="150"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Выезд"/>
+                    <DatePicker Name="EndDate" Width="150"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Статус"/>
+                    <ComboBox Name="StatusBox" Width="170" Margin="0 5 12 13" SelectedIndex="0">
+                        <ComboBoxItem Content="Подтверждено"/>
+                        <ComboBoxItem Content="Завершено"/>
+                        <ComboBoxItem Content="Отменено"/>
+                    </ComboBox>
+                </StackPanel>
+                <Button Name="UpdateButton" Content="Сохранить" Click="UpdateButton_Click" VerticalAlignment="Bottom" Height="34" Margin="0 0 8 13"/>
+                <Button Name="DeleteButton" Content="Удалить" Click="DeleteButton_Click" VerticalAlignment="Bottom" Height="34" Margin="0 0 0 13"/>
+            </StackPanel>
+            <Button Name="CancelButton" Content="Отменить выбранное бронирование" Click="CancelButton_Click" HorizontalAlignment="Left" Margin="0 20 0 12"/>
+            <TextBlock Name="StatusText" Foreground="Firebrick" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Page>

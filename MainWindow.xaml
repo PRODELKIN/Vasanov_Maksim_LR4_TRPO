@@ -1,0 +1,31 @@
+﻿<Window x:Class="Hotel_Vasanov_ISP43.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Гостиница" Width="1120" Height="760" MinWidth="880" MinHeight="620"
+        WindowStartupLocation="CenterScreen" Background="#F5F7FA">
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Background="#17324D" Padding="20 14">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Гостиница" Foreground="White" FontSize="23" VerticalAlignment="Center" Margin="0 0 32 0"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Name="RoomsButton" Content="Номера" Click="RoomsButton_Click"/>
+                    <Button Name="BookingsButton" Content="Мои бронирования" Click="BookingsButton_Click"/>
+                    <Button Name="AdminButton" Content="Управление" Click="AdminButton_Click"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Name="UserLabel" Foreground="White" VerticalAlignment="Center" Margin="0 0 12 0"/>
+                    <Button Name="LoginButton" Content="Войти" Click="LoginButton_Click"/>
+                    <Button Name="RegisterButton" Content="Регистрация" Click="RegisterButton_Click"/>
+                    <Button Name="LogoutButton" Content="Выйти" Click="LogoutButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Frame Name="ContentFrame" NavigationUIVisibility="Hidden" Background="#F5F7FA"/>
+    </DockPanel>
+</Window>
+

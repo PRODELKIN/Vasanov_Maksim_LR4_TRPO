@@ -1,0 +1,30 @@
+﻿<Page x:Class="Hotel_Vasanov_ISP43.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Регистрация" Background="#F5F7FA">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Width="360" HorizontalAlignment="Center" Margin="20 32">
+                <TextBlock Text="Регистрация пользователя" FontSize="25" Margin="0 0 0 18"/>
+                <TextBlock Text="Ф. И. О."/>
+                <TextBox Name="NameBox" MaxLength="100"/>
+                <TextBlock Text="Телефон"/>
+                <TextBox Name="PhoneBox" MaxLength="20"/>
+                <TextBlock Text="Электронная почта"/>
+                <TextBox Name="EmailBox" MaxLength="100"/>
+                <TextBlock Text="Пароль (от 6 символов)"/>
+                <PasswordBox Name="PasswordInput" MaxLength="100"/>
+                <TextBlock Text="Повторите пароль"/>
+                <PasswordBox Name="PasswordRepeat" MaxLength="100"/>
+                <TextBlock Text="Код с картинки"/>
+                <Border Name="CaptchaBorder" Width="240" Height="60" HorizontalAlignment="Left" BorderBrush="#90A9BF" BorderThickness="1" Margin="0 7 0 5"/>
+                <Button Name="RefreshButton" Content="Новый код" HorizontalAlignment="Left" Click="RefreshButton_Click" Margin="0 0 0 8"/>
+                <TextBox Name="CaptchaInput" MaxLength="6"/>
+                <TextBlock Name="StatusText" Foreground="Firebrick" TextWrapping="Wrap" Margin="0 0 0 12"/>
+                <Button Name="CreateButton" Content="Зарегистрироваться" Click="CreateButton_Click" HorizontalAlignment="Left"/>
+                <Button Name="LoginButton" Content="Вернуться ко входу" Click="LoginButton_Click" HorizontalAlignment="Left" Margin="0 15 0 0"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
+
