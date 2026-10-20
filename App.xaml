@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Hotel_Vasanov_ISP43"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
+    <Application.Resources> 
         <Style TargetType="Button">
             <Setter Property="Margin" Value="0 0 10 0"/>
             <Setter Property="Padding" Value="14 8"/>

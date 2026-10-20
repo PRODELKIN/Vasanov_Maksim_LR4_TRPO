@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Гостиница" Width="1120" Height="760" MinWidth="880" MinHeight="620"
         WindowStartupLocation="CenterScreen" Background="#F5F7FA">
-    <DockPanel>
+    <DockPanel> 
         <Border DockPanel.Dock="Top" Background="#17324D" Padding="20 14">
             <Grid>
                 <Grid.ColumnDefinitions>

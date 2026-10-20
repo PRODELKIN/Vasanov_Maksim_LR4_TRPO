@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Hotel_Vasanov_ISP43.Pages;
+using Hotel_Vasanov_ISP43.Pages; 
 
 namespace Hotel_Vasanov_ISP43
 {
